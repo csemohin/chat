@@ -21,7 +21,8 @@ h6 {
 }
 
 input:focus,
-textarea:focus {
+textarea:focus,
+button:focus {
 	outline: none;
 }
 
@@ -103,19 +104,15 @@ textarea:focus {
 .ch-user {
 	padding: 10px;
 }
-.ch-user-photo {
-	width: 35px;
-	height: 35px;
-	border-radius: 50%;
-	overflow: hidden;
-	float: right;
-	cursor: pointer;
+
+.ch-user-photo a {
+	display: block
 }
 
 /* sub header  */
 .ch-sub-navbar {
 	display: grid;
-	grid-template-columns: 250px 20% auto 100px;
+	grid-template-columns: 250px 20% auto 90px;
 	align-items: center;
 	border-bottom: 1px solid #ddd;
 	height: 50px;
@@ -154,7 +151,8 @@ textarea:focus {
 	display: inline-block;
 	width: 35px;
 	height: 35px;
-	font-size: 13px;
+	font-size: 11px;
+	font-weight: 600;
 	text-align: center;
 	line-height: 35px;
 	border-radius: 50%;
@@ -231,22 +229,30 @@ textarea:focus {
 
 .ch-users {
 	border-right: 1px solid #ddd;
-	max-height: calc(100vh - 100px);
+	max-height: calc(100vh - 110px);
 	overflow-y: auto;
 	-ms-overflow-style: none;
 }
+
+.single-user-wrapper:last-child {
+	border-bottom: none;
+}
+
 .ch-users::-webkit-scrollbar {
 	display: none;
 }
+
 /* message body  */
-.message-body-wrapper{
-	max-height: calc(100vh - 100px);
+.message-body-wrapper {
+	max-height: calc(100vh - 215px);
 	overflow-y: auto;
 	-ms-overflow-style: none;
 }
+
 .message-body-wrapper::-webkit-scrollbar {
 	display: none;
 }
+
 .ch-user-photo {
 	float: left;
 	margin-right: 10px;
@@ -259,9 +265,9 @@ textarea:focus {
 
 .ch-message {
 	float: left;
-	max-width: calc(100% - 100px);
+	max-width: calc(100% - 80px);
 	background-color: #e6e6e6;
-	padding: 10px;
+	padding: 8px 10px;
 	border-radius: 4px;
 	font-size: 13px;
 	line-height: 22px;
@@ -289,8 +295,8 @@ textarea:focus {
 	width: 100%;
 	background: transparent;
 	border: none;
-	padding: 15px 15px 50px;
-	height: 120px;
+	padding: 15px 15px 35px;
+	height: 100px;
 	overflow: hidden;
 }
 
