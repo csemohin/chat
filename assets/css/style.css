@@ -1,8 +1,8 @@
 /* 1. Theme default css */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,800|Roboto:300,300i,400,400i,500,700,700i,900,900i');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,800|Roboto:300,300i,400,400i,500,700,700i,900,900i");
 
 body {
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans", sans-serif;
 	font-weight: 400;
 	font-style: normal;
 }
@@ -20,6 +20,11 @@ h6 {
 	margin-bottom: 0;
 }
 
+input:focus,
+textarea:focus {
+	outline: none;
+}
+
 /* css start  */
 .img {
 	width: 100%;
@@ -32,7 +37,7 @@ h6 {
 
 .ch-navbar {
 	display: grid;
-	grid-template-columns: 60px auto 60px;
+	grid-template-columns: 80px auto 60px;
 	align-items: center;
 }
 
@@ -41,10 +46,16 @@ h6 {
 }
 
 .ch-logo {
+	overflow: hidden;
 	font-size: 15px;
 	font-weight: 700;
 	padding: 10px;
 	float: left;
+	max-width: 100px;
+}
+
+.ch-logo img {
+	width: 100%;
 }
 
 .ch-search input,
@@ -54,9 +65,15 @@ h6 {
 	background: transparent;
 	box-shadow: none;
 	border: none;
-	padding: 5px 14px 10px 30px;
+	padding: 10px 10px 10px 30px;
 	display: block;
 	font-weight: 500;
+	height: 100%;
+	font-weight: 600;
+}
+
+.ch-search form,
+.ch-inbox-search form {
 	height: 100%;
 }
 
@@ -65,7 +82,7 @@ h6 {
 	position: absolute;
 	height: 100%;
 	top: 50%;
-	transform: translateY(-16px);
+	transform: translateY(-14px);
 	z-index: -1;
 }
 
@@ -86,7 +103,6 @@ h6 {
 .ch-user {
 	padding: 10px;
 }
-
 .ch-user-photo {
 	width: 35px;
 	height: 35px;
@@ -99,7 +115,7 @@ h6 {
 /* sub header  */
 .ch-sub-navbar {
 	display: grid;
-	grid-template-columns: 250px 150px auto 100px;
+	grid-template-columns: 250px 20% auto 100px;
 	align-items: center;
 	border-bottom: 1px solid #ddd;
 	height: 50px;
@@ -133,7 +149,7 @@ h6 {
 }
 
 .user-short-name {
-	background-color: #B5A233;
+	background-color: #b5a233;
 	color: #fff;
 	display: inline-block;
 	width: 35px;
@@ -200,7 +216,7 @@ h6 {
 
 .ch-user-info {
 	float: left;
-	width:  calc(100% - 100px);
+	width: calc(100% - 46px);
 }
 
 .ch-body {
@@ -215,10 +231,22 @@ h6 {
 
 .ch-users {
 	border-right: 1px solid #ddd;
-	height: 100%;
+	max-height: calc(100vh - 100px);
+	overflow-y: auto;
+	-ms-overflow-style: none;
 }
-
+.ch-users::-webkit-scrollbar {
+	display: none;
+}
 /* message body  */
+.message-body-wrapper{
+	max-height: calc(100vh - 100px);
+	overflow-y: auto;
+	-ms-overflow-style: none;
+}
+.message-body-wrapper::-webkit-scrollbar {
+	display: none;
+}
 .ch-user-photo {
 	float: left;
 	margin-right: 10px;
@@ -231,7 +259,7 @@ h6 {
 
 .ch-message {
 	float: left;
-	width: calc(100% - 100px);
+	max-width: calc(100% - 100px);
 	background-color: #e6e6e6;
 	padding: 10px;
 	border-radius: 4px;
@@ -247,6 +275,47 @@ h6 {
 
 .ch-single-message.ch-sender .ch-message {
 	float: right;
-	background: #3467CC;
+	background: #3467cc;
 	color: #fff;
 }
+
+/* message input  */
+.ch-message-input {
+	position: relative;
+	z-index: 1;
+}
+
+.ch-message-input textarea {
+	width: 100%;
+	background: transparent;
+	border: none;
+	padding: 15px 15px 50px;
+	height: 120px;
+	overflow: hidden;
+}
+
+.ch-message-input .ch-submit-file {
+	position: absolute;
+	bottom: 10px;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	align-items: center;
+	padding: 0 15px;
+}
+
+.ch-submit-file input[type="submit"] {
+	border: none;
+	background-color: #3467CC;
+	color: #fff;
+	padding: 5px 12px;
+	border-radius: 4px;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.ch-message-input {
+	border-top: 1px solid #ddd;
+}
+
+/* input[type="file"], .ch-message-input input[type="submit"] */
