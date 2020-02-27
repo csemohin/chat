@@ -37,7 +37,7 @@
   }
 
   .ch-sub-navbar {
-    grid-template-columns: 50px auto 90px;
+    grid-template-columns: 50px auto 100px;
   }
 
   .user-short-name {
