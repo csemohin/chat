@@ -142,7 +142,7 @@ button:focus {
 	background: transparent;
 	border: none;
 	cursor: pointer;
-	padding: 5px 15px;
+	padding: 5px 20px;
 }
 
 .user-short-name {
@@ -190,7 +190,7 @@ button:focus {
 .single-user-wrapper {
 	display: block;
 	overflow: hidden;
-	padding: 10px;
+	padding: 10px 15px;
 	border-bottom: 1px solid #ddd;
 }
 

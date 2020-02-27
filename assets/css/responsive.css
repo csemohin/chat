@@ -9,7 +9,7 @@
 /* min 200 max 500 */
 @media only screen and (min-width: 200px) and (max-width: 550px) {
   .ch-navbar {
-    grid-template-columns: 50px auto 60px;
+    grid-template-columns: 60px auto 60px;
   }
 
   .ch-logo {
@@ -37,7 +37,7 @@
   }
 
   .ch-sub-navbar {
-    grid-template-columns: 50px auto 100px;
+    grid-template-columns: 60px auto 100px;
   }
 
   .user-short-name {
@@ -58,7 +58,7 @@
 
   .ch-body {
     display: grid;
-    grid-template-columns: 50px auto;
+    grid-template-columns: 60px auto;
   }
 
   .user-thumb-icon {
